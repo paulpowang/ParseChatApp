@@ -16,6 +16,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordInput: UITextField!
     
+    var message: String = ""
+    
     
     
     
@@ -30,8 +32,8 @@ class LoginViewController: UIViewController {
             loginViewAlert()
             
         }else{
-            
             registerUser()
+            
         }
         
     }
@@ -44,6 +46,7 @@ class LoginViewController: UIViewController {
         }else{
             
             loginUser()
+            
         }
         
     }
@@ -66,7 +69,7 @@ class LoginViewController: UIViewController {
             } else {
                 print("User Registered successfully")
                 // manually segue to logged in view
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                //self.performSegue(withIdentifier: "loginSegue", sender: nil)
             }
         }
     }
@@ -93,7 +96,7 @@ class LoginViewController: UIViewController {
     func loginViewAlert(){
         
         let title = "Error"
-        let message: String
+        
         if (usernameInput.text?.isEmpty)! && (passwordInput.text?.isEmpty)!{
             message = "Please Enter Username and Password."
         }else if (usernameInput.text?.isEmpty)!{
