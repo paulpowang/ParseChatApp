@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="ParseChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="logoutSegue" id="BYZ-38-t0r" customClass="LoginViewController" customModule="ParseChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,7 +160,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bvz-YL-hKE"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Chat" id="601-Nu-O72"/>
+                    <navigationItem key="navigationItem" title="Chat" id="601-Nu-O72">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="152-vI-cVd">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kP3-6B-Fc7">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutBtn:" destination="Hsw-N3-GwC" eventType="touchUpInside" id="8C5-uX-azt"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="Y7A-gP-g0O"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="chatMessageInput" destination="Mn1-Q3-sI8" id="K4f-iY-o1K"/>
                         <outlet property="tableView" destination="cmX-ZZ-7z5" id="5hY-vd-DtH"/>

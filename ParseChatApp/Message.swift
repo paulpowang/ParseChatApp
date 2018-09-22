@@ -6,14 +6,23 @@
 //  Copyright © 2018 PoHung Wang. All rights reserved.
 //
 
-import UIKit
-import Parse
+import Foundation
 
-class Message: PFObject {
+class Message{
     
-    let chatMessage = PFObject(className: "Message")
+    private var _username: String = ""
+    private var _message: String = ""
     
+    init(username: String, message: String){
+        _username = username
+        _message = message
+    }
     
+    var username: String {
+        return _username
+    }
     
-
+    var message: String{
+        return _message
+    }
 }

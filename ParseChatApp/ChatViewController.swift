@@ -15,6 +15,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var tableView: UITableView!
     
     var messages: [PFObject] = []
+    let logoutSegue = "logoutSegue"
     
     
     
@@ -39,6 +40,14 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     
+    
+    @IBAction func logoutBtn(_ sender: Any) {
+        PFUser.logOut()
+        //performSegue(withIdentifier: logoutSegue, sender: nil)
+        
+    }
+    
+    
     //Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
     
 
@@ -54,7 +63,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Provide an estimated row height. Used for calculating scroll indicator
         tableView.estimatedRowHeight = 100
         queryMessage()
-        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
+        //Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
     }
     
     
@@ -84,11 +93,13 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func queryMessage(){
         // construct query
         let query = PFQuery(className: "Message")
+        
         //query.whereKey("likesCount", greaterThan: 100)
         query.includeKey("user")
         //query.limit = 20
         //sort the result by create time
         query.addDescendingOrder("createdAt")
+        
         
         // fetch data asynchronously
         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in

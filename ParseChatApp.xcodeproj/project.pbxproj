@@ -18,8 +18,8 @@
 		DA05531F21561766005BDF11 /* ParseChatAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05531E21561766005BDF11 /* ParseChatAppTests.swift */; };
 		DA05532A21561766005BDF11 /* ParseChatAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05532921561766005BDF11 /* ParseChatAppUITests.swift */; };
 		DA055338215627EE005BDF11 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA055337215627EE005BDF11 /* ChatViewController.swift */; };
-		DA05533A21562A31005BDF11 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05533921562A31005BDF11 /* Message.swift */; };
 		DA05533C21562DD3005BDF11 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05533B21562DD3005BDF11 /* ChatCell.swift */; };
+		DA0553782156ED0B005BDF11 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0553772156ED0B005BDF11 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +61,8 @@
 		DA05532921561766005BDF11 /* ParseChatAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseChatAppUITests.swift; sourceTree = "<group>"; };
 		DA05532B21561766005BDF11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA055337215627EE005BDF11 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		DA05533921562A31005BDF11 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		DA05533B21562DD3005BDF11 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		DA0553772156ED0B005BDF11 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		F1608723F2C363ED9ED5C51A /* Pods-ParseChatAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseChatAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParseChatAppTests/Pods-ParseChatAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		FA40C749D5A302D64CB16F96 /* Pods_ParseChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParseChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -140,8 +140,8 @@
 				DA05531221561766005BDF11 /* LaunchScreen.storyboard */,
 				DA05531521561766005BDF11 /* Info.plist */,
 				DA055337215627EE005BDF11 /* ChatViewController.swift */,
-				DA05533921562A31005BDF11 /* Message.swift */,
 				DA05533B21562DD3005BDF11 /* ChatCell.swift */,
+				DA0553772156ED0B005BDF11 /* Message.swift */,
 			);
 			path = ParseChatApp;
 			sourceTree = "<group>";
@@ -403,8 +403,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA05530C21561764005BDF11 /* LoginViewController.swift in Sources */,
-				DA05533A21562A31005BDF11 /* Message.swift in Sources */,
 				DA055338215627EE005BDF11 /* ChatViewController.swift in Sources */,
+				DA0553782156ED0B005BDF11 /* Message.swift in Sources */,
 				DA05533C21562DD3005BDF11 /* ChatCell.swift in Sources */,
 				DA05530A21561764005BDF11 /* AppDelegate.swift in Sources */,
 			);

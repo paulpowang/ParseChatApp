@@ -17,13 +17,14 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordInput: UITextField!
     
     var message: String = ""
-    
+    let loginSegue = "loginSegue"
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     
@@ -33,6 +34,7 @@ class LoginViewController: UIViewController {
             
         }else{
             registerUser()
+            performSegue(withIdentifier: loginSegue, sender: nil)
             
         }
         
@@ -50,8 +52,13 @@ class LoginViewController: UIViewController {
         }
         
     }
-    
-    
+    //if user already login and haven't logout, direct into chat view
+    override func viewDidAppear(_ animated: Bool) {
+        // check if user is logged in.
+        if PFUser.current() != nil {
+            performSegue(withIdentifier: loginSegue, sender: nil)
+        }
+    }
     
     func registerUser() {
         // initialize a user object
