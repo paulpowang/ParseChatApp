@@ -11,7 +11,7 @@
 		62E14C1E9329DCD751ABA7A2 /* Pods_ParseChatAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B915C60E8D9B603FD99F1FE /* Pods_ParseChatAppUITests.framework */; };
 		D4990D6F46CEA584A55DB4B0 /* Pods_ParseChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA40C749D5A302D64CB16F96 /* Pods_ParseChatApp.framework */; };
 		DA05530A21561764005BDF11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05530921561764005BDF11 /* AppDelegate.swift */; };
-		DA05530C21561764005BDF11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05530B21561764005BDF11 /* ViewController.swift */; };
+		DA05530C21561764005BDF11 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA05530B21561764005BDF11 /* LoginViewController.swift */; };
 		DA05530F21561764005BDF11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA05530D21561764005BDF11 /* Main.storyboard */; };
 		DA05531121561766005BDF11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA05531021561766005BDF11 /* Assets.xcassets */; };
 		DA05531421561766005BDF11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA05531221561766005BDF11 /* LaunchScreen.storyboard */; };
@@ -46,7 +46,7 @@
 		C203733279BE11D46CE5E0EB /* Pods-ParseChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseChatApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParseChatApp/Pods-ParseChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		DA05530621561764005BDF11 /* ParseChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA05530921561764005BDF11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA05530B21561764005BDF11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DA05530B21561764005BDF11 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DA05530E21561764005BDF11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA05531021561766005BDF11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA05531321561766005BDF11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				DA05530921561764005BDF11 /* AppDelegate.swift */,
-				DA05530B21561764005BDF11 /* ViewController.swift */,
+				DA05530B21561764005BDF11 /* LoginViewController.swift */,
 				DA05530D21561764005BDF11 /* Main.storyboard */,
 				DA05531021561766005BDF11 /* Assets.xcassets */,
 				DA05531221561766005BDF11 /* LaunchScreen.storyboard */,
@@ -393,7 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA05530C21561764005BDF11 /* ViewController.swift in Sources */,
+				DA05530C21561764005BDF11 /* LoginViewController.swift in Sources */,
 				DA05530A21561764005BDF11 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
