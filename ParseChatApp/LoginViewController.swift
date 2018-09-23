@@ -52,6 +52,8 @@ class LoginViewController: UIViewController {
         }
         
     }
+    
+    /*
     //if user already login and haven't logout, direct into chat view
     override func viewDidAppear(_ animated: Bool) {
         // check if user is logged in.
@@ -59,6 +61,7 @@ class LoginViewController: UIViewController {
             performSegue(withIdentifier: loginSegue, sender: nil)
         }
     }
+ */
     
     func registerUser() {
         // initialize a user object
