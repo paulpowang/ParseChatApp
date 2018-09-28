@@ -103,7 +103,10 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="ci0-5z-U81"/>
                                 </constraints>
-                                <state key="normal" title="Send"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="sendBtn:" destination="Hsw-N3-GwC" eventType="touchUpInside" id="HMA-19-9VU"/>
                                 </connections>
@@ -112,38 +115,38 @@
                                 <rect key="frame" x="0.0" y="107" width="375" height="560"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="181" id="lbi-iA-PSl" customClass="ChatCell" customModule="ParseChatApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" id="dhN-lD-o4o" customClass="ChatCell" customModule="ParseChatApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="181"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lbi-iA-PSl" id="Rta-1p-fMD" customClass="ChatCell" customModule="ParseChatApp" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dhN-lD-o4o" id="tyC-He-VNF">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="180.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ruby is a cute dog" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrK-po-RAV">
-                                                    <rect key="frame" x="23" y="47.5" width="329" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aE-Qw-nUt">
+                                                    <rect key="frame" x="23" y="19" width="43.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1C-1k-N10">
+                                                    <rect key="frame" x="23" y="48" width="329" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Annie" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQu-vQ-l0b">
-                                                    <rect key="frame" x="23" y="19" width="43.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="UQu-vQ-l0b" firstAttribute="top" secondItem="Rta-1p-fMD" secondAttribute="topMargin" constant="8" id="VaL-Yp-sMe"/>
-                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="QrK-po-RAV" secondAttribute="bottom" constant="8" id="brL-rH-UNw"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="QrK-po-RAV" secondAttribute="trailing" constant="8" id="eKW-lP-jZc"/>
-                                                <constraint firstItem="QrK-po-RAV" firstAttribute="top" secondItem="UQu-vQ-l0b" secondAttribute="bottom" constant="8" id="foq-7t-tDy"/>
-                                                <constraint firstItem="QrK-po-RAV" firstAttribute="leading" secondItem="Rta-1p-fMD" secondAttribute="leadingMargin" constant="8" id="m8Z-nD-6CX"/>
-                                                <constraint firstItem="UQu-vQ-l0b" firstAttribute="leading" secondItem="Rta-1p-fMD" secondAttribute="leadingMargin" constant="8" id="qqu-cG-2bF"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="l1C-1k-N10" secondAttribute="trailing" constant="8" id="45G-k6-4yg"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="l1C-1k-N10" secondAttribute="bottom" constant="8" id="4mT-Jv-oUq"/>
+                                                <constraint firstItem="8aE-Qw-nUt" firstAttribute="leading" secondItem="tyC-He-VNF" secondAttribute="leadingMargin" constant="8" id="D0N-Ah-jkw"/>
+                                                <constraint firstItem="l1C-1k-N10" firstAttribute="top" secondItem="8aE-Qw-nUt" secondAttribute="bottom" constant="8" id="b9J-y1-WhB"/>
+                                                <constraint firstItem="l1C-1k-N10" firstAttribute="leading" secondItem="tyC-He-VNF" secondAttribute="leadingMargin" constant="8" id="eM0-3O-Rzg"/>
+                                                <constraint firstItem="8aE-Qw-nUt" firstAttribute="top" secondItem="tyC-He-VNF" secondAttribute="topMargin" constant="8" id="ue4-6r-hZC"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="chatMessage" destination="QrK-po-RAV" id="D3s-2j-bTL"/>
-                                            <outlet property="username" destination="UQu-vQ-l0b" id="rIo-Rz-qW1"/>
+                                            <outlet property="chatMessage" destination="l1C-1k-N10" id="izn-je-sEC"/>
+                                            <outlet property="username" destination="8aE-Qw-nUt" id="wfD-sf-7EW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
