@@ -51,7 +51,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         // Auto size row height based on cell autolayout constraints
         //tableView.rowHeight = 70
-        //tableView.rowHeight = UITableView.automaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         // Provide an estimated row height. Used for calculating scroll indicator
         //tableView.estimatedRowHeight = 70
         

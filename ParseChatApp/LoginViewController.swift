@@ -29,13 +29,31 @@ class LoginViewController: UIViewController {
 
     
     @IBAction func signUpBtn(_ sender: Any) {
-        if (usernameInput.text?.isEmpty)! || (passwordInput.text?.isEmpty)! {
-            loginViewAlert()
+        
+        // initialize a user object
+        let newUser = PFUser()
+        
+        newUser.username = usernameInput.text
+        newUser.password = passwordInput.text
+        newUser.signUpInBackground{
+            (success: Bool, error: Error?) in
             
-        }else{
-            registerUser()
-            performSegue(withIdentifier: loginSegue, sender: nil)
-            
+            if let error = error {
+                if(newUser.username?.isEmpty)! || (newUser.password?.isEmpty)!{
+                    self.loginViewAlert()
+                }
+                switch error._code{
+                case 202:
+                    self.existAlert()
+                    break
+                default:
+                    break
+                }
+                print(error.localizedDescription)
+            }else {
+                print("Create a new account")
+                //  self.performSegue(withIdentifier: "loginSegue", sender: nil)
+            }
         }
         
     }
@@ -53,36 +71,7 @@ class LoginViewController: UIViewController {
         
     }
     
-    /*
-    //if user already login and haven't logout, direct into chat view
-    override func viewDidAppear(_ animated: Bool) {
-        // check if user is logged in.
-        if PFUser.current() != nil {
-            performSegue(withIdentifier: loginSegue, sender: nil)
-        }
-    }
- */
     
-    func registerUser() {
-        // initialize a user object
-        let newUser = PFUser()
-        
-        // set user properties
-        newUser.username = usernameInput.text
-        //newUser.email = emailField.text
-        newUser.password = passwordInput.text
-        
-        // call sign up function on the object
-        newUser.signUpInBackground { (success: Bool, error: Error?) in
-            if let error = error {
-                print(error.localizedDescription)
-            } else {
-                print("User Registered successfully")
-                // manually segue to logged in view
-                //self.performSegue(withIdentifier: "loginSegue", sender: nil)
-            }
-        }
-    }
     
     func loginUser() {
         
@@ -91,7 +80,15 @@ class LoginViewController: UIViewController {
         
         PFUser.logInWithUsername(inBackground: username, password: password) { (user: PFUser?, error: Error?) in
             if let error = error {
-                print("User log in failed: \(error.localizedDescription)")
+                let alertController = UIAlertController(title: "Error", message: "\(error.localizedDescription)", preferredStyle: .alert)
+                let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                }
+                alertController.addAction(OKAction)
+                DispatchQueue.global().async(execute: {
+                    DispatchQueue.main.sync{
+                        self.present(alertController, animated: true, completion: nil)
+                    }
+                })
             } else {
                 print("User logged in successfully")
                 // display view controller that needs to shown after successful login
@@ -127,6 +124,20 @@ class LoginViewController: UIViewController {
         present(alertController, animated: true)
     }
     
+    func existAlert() {
+        let alertController = UIAlertController(title: "User has already existed", message: "Please enter a valid username", preferredStyle: .alert)
+        
+        // create an OK action
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            // handle response here.
+        }
+        // add the OK action to the alert controller
+        alertController.addAction(OKAction)
+        
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
     
 
 }

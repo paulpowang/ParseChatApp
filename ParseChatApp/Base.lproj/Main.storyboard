@@ -108,48 +108,37 @@
                                     <action selector="sendBtn:" destination="Hsw-N3-GwC" eventType="touchUpInside" id="HMA-19-9VU"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="83" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cmX-ZZ-7z5">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="181" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cmX-ZZ-7z5">
                                 <rect key="frame" x="0.0" y="107" width="375" height="560"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="83" id="lbi-iA-PSl" customClass="ChatCell" customModule="ParseChatApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="83"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" rowHeight="181" id="lbi-iA-PSl" customClass="ChatCell" customModule="ParseChatApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="181"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lbi-iA-PSl" id="Rta-1p-fMD" customClass="ChatCell" customModule="ParseChatApp" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="82.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="180.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wlJ-27-dBm">
-                                                    <rect key="frame" x="8" y="8" width="359" height="66.5"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Annie" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQu-vQ-l0b">
-                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="38"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ruby is a cute dog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrK-po-RAV">
-                                                            <rect key="frame" x="0.0" y="46" width="359" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="UQu-vQ-l0b" firstAttribute="leading" secondItem="wlJ-27-dBm" secondAttribute="leading" id="5Wk-Ic-DTc"/>
-                                                        <constraint firstItem="UQu-vQ-l0b" firstAttribute="top" secondItem="wlJ-27-dBm" secondAttribute="top" id="Dzd-JP-Bas"/>
-                                                        <constraint firstItem="QrK-po-RAV" firstAttribute="leading" secondItem="wlJ-27-dBm" secondAttribute="leading" id="Til-AS-PSB"/>
-                                                        <constraint firstAttribute="trailing" secondItem="UQu-vQ-l0b" secondAttribute="trailing" id="Yde-IS-shl"/>
-                                                        <constraint firstAttribute="bottom" secondItem="QrK-po-RAV" secondAttribute="bottom" id="ti1-d0-vF0"/>
-                                                        <constraint firstAttribute="trailing" secondItem="QrK-po-RAV" secondAttribute="trailing" id="yRV-Bs-TYg"/>
-                                                    </constraints>
-                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ruby is a cute dog" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrK-po-RAV">
+                                                    <rect key="frame" x="23" y="47.5" width="329" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Annie" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQu-vQ-l0b">
+                                                    <rect key="frame" x="23" y="19" width="43.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="wlJ-27-dBm" firstAttribute="top" secondItem="Rta-1p-fMD" secondAttribute="top" constant="8" id="DZZ-3O-p9f"/>
-                                                <constraint firstItem="wlJ-27-dBm" firstAttribute="leading" secondItem="Rta-1p-fMD" secondAttribute="leading" constant="8" id="Jh2-GA-Vs8"/>
-                                                <constraint firstAttribute="trailing" secondItem="wlJ-27-dBm" secondAttribute="trailing" constant="8" id="MF5-SR-W1M"/>
-                                                <constraint firstAttribute="bottom" secondItem="wlJ-27-dBm" secondAttribute="bottom" constant="8" id="cJg-yh-aAe"/>
+                                                <constraint firstItem="UQu-vQ-l0b" firstAttribute="top" secondItem="Rta-1p-fMD" secondAttribute="topMargin" constant="8" id="VaL-Yp-sMe"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="QrK-po-RAV" secondAttribute="bottom" constant="8" id="brL-rH-UNw"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="QrK-po-RAV" secondAttribute="trailing" constant="8" id="eKW-lP-jZc"/>
+                                                <constraint firstItem="QrK-po-RAV" firstAttribute="top" secondItem="UQu-vQ-l0b" secondAttribute="bottom" constant="8" id="foq-7t-tDy"/>
+                                                <constraint firstItem="QrK-po-RAV" firstAttribute="leading" secondItem="Rta-1p-fMD" secondAttribute="leadingMargin" constant="8" id="m8Z-nD-6CX"/>
+                                                <constraint firstItem="UQu-vQ-l0b" firstAttribute="leading" secondItem="Rta-1p-fMD" secondAttribute="leadingMargin" constant="8" id="qqu-cG-2bF"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
