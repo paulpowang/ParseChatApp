@@ -16,11 +16,15 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var chatMessageInput: UITextField!
     
     var messages: [PFObject] = []
+    let currentUser = PFUser.current()
+    var refreshControl: UIRefreshControl!
     
     
     @IBAction func sendBtn(_ sender: Any) {
         
         let chatMessage = PFObject(className: "Message")
+        
+        chatMessage["user"] = PFUser.current()
         
         chatMessage["text"] = chatMessageInput.text ?? ""
         
@@ -36,12 +40,13 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         }
     }
-    
+    /*
     @IBAction func logoutBtn(_ sender: Any) {
         PFUser.logOut()
+        
         dismiss(animated: true, completion: nil)
     }
-    
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -53,11 +58,20 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //tableView.rowHeight = 70
         tableView.rowHeight = UITableView.automaticDimension
         // Provide an estimated row height. Used for calculating scroll indicator
-        //tableView.estimatedRowHeight = 70
+        tableView.estimatedRowHeight = 50
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(ChatViewController.didPullToRefresh(_:)), for: .valueChanged)
+        tableView.insertSubview(refreshControl, at: 0)
         
         queryMessage()
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.onTimer), userInfo: nil, repeats: true)
         
+    }
+    
+    @objc func didPullToRefresh(_ refreshControl: UIRefreshControl)
+    {
+        queryMessage()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -103,6 +117,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 //let str: String = self.messages[1]["text"] as! String
                 
                 self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
                 
             } else {
                 print(error!.localizedDescription)

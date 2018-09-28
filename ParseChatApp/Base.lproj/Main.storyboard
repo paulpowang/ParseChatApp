@@ -167,17 +167,9 @@
                         <viewLayoutGuide key="safeArea" id="Bvz-YL-hKE"/>
                     </view>
                     <navigationItem key="navigationItem" title="Chat" id="601-Nu-O72">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="152-vI-cVd">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kP3-6B-Fc7">
-                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="logoutBtn:" destination="Hsw-N3-GwC" eventType="touchUpInside" id="8C5-uX-azt"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="GjC-mN-3wQ">
                             <connections>
-                                <action selector="logoutBtn:" destination="Hsw-N3-GwC" id="S0f-7C-z1U"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="xJ5-2k-pms"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
